@@ -12,5 +12,5 @@ namespace olivierbon\squeeze;
  */
 class Squeeze extends \craft\base\Plugin
 {
-    
+
 }
