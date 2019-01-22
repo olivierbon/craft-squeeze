@@ -12,5 +12,12 @@ namespace olivierbon\squeeze;
  */
 class Squeeze extends \craft\base\Plugin
 {
+    public function init()
+    {
+        parent::init();
 
+        $this->setComponents([
+            'squeeze' => \olivierbon\squeeze\services\SqueezeService::class,
+        ]);
+    }
 }

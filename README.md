@@ -1,6 +1,6 @@
 # Squeeze plugin for Craft CMS 3.x
 
-Zip your craft assets on the fly ready for download
+Zip your craft assets on the fly ready for your user to download
 
 ## Requirements
 
@@ -12,4 +12,6 @@ Go to the Plugin Store in your project’s Control Panel and search for “Squee
 
 ## Squeeze Overview and Documentation
 
-Please visit the [Squeeze Website](https://concierge.olivierbon.com)
+Please visit the [Squeeze repo](https://github.com/olivierbon/craft-squeeze)
+
+(Icon by Yazmin Alanis from the Noun Project)

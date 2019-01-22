@@ -5,10 +5,16 @@ namespace olivierbon\squeeze\controllers;
 use Craft;
 use craft\web\Controller;
 use olivierbon\squeeze\Squeeze;
-use yii\web\Response;
+use craft\helpers\FileHelper;
 
-use Composer\Package\Archiver\ZipArchive
-
+/**
+ * DownloadController Class 
+ *
+ * @author    Olivier Bon
+ * @package   Squeeze
+ * @since     1.0.0
+ *
+ */
 class DownloadController extends Controller
 {
 
@@ -22,17 +28,22 @@ class DownloadController extends Controller
     // Public Methods
     // =========================================================================
     /**
-     * Sends a contact form submission.
+     * Trigers when a user wants to download a zip archive.
      *
      * @return Response|null
      */
     public function actionIndex()
     {
         $request = Craft::$app->getRequest();
-        $fileName = $request->getBodyParam('filename'); //string
-        $files = $request->getBodyParam('files'); // array
-
-        // Craft::zip();
-        Craft::dd(new ZipArchive);
+        // Get the files to zip
+        $files = $request->getRequiredBodyParam('files'); // array
+        // Get the filename
+        $filename = $request->getRequiredBodyParam('archivename'); //string
+        // Create the archive
+        $archive = Squeeze::getInstance()->squeeze->archive($filename, $files);
+        // Push the download
+        Craft::$app->response->sendFile($archive, null, array('forceDownload' => true));
+        // Delete the temps file
+        FileHelper::unlink($archive);
     }
 }
