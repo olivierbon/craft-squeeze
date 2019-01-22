@@ -14,4 +14,7 @@ Go to the Plugin Store in your project’s Control Panel and search for “Squee
 
 Please visit the [Squeeze repo](https://github.com/olivierbon/craft-squeeze)
 
-(Icon by Yazmin Alanis from the Noun Project)
+## Credits
+
+Icon by Yazmin Alanis from the Noun Project
+This plugin is mostly a port of [Bob's](https://github.com/boboldehampsink/zipassets)
