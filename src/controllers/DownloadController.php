@@ -36,9 +36,9 @@ class DownloadController extends Controller
     {
         $request = Craft::$app->getRequest();
         // Get the files to zip
-        $files = $request->getRequiredBodyParam('files'); // array
+        $files = $request->getRequiredParam('files'); // array
         // Get the filename
-        $filename = $request->getRequiredBodyParam('archivename'); //string
+        $filename = $request->getRequiredParam('archivename'); //string
         // Create the archive
         $archive = Squeeze::getInstance()->squeeze->archive($filename, $files);
         // Push the download

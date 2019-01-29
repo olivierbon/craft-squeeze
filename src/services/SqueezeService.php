@@ -41,7 +41,7 @@ class SqueezeService extends Component
             }
             
             $zip->close();
-
+            
             return $tempFile;   
         }
         

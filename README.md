@@ -10,9 +10,20 @@ This plugin requires Craft CMS 3.0.0-RC11 or later.
 
 Go to the Plugin Store in your project’s Control Panel and search for “Squeeze”. Then click on the “Install” button in its modal window.
 
-## Squeeze Overview and Documentation
+## Usage
 
-Please visit the [Squeeze repo](https://github.com/olivierbon/craft-squeeze)
+```html
+<form method="post" target="_blank">
+    {{ getCsrfInput() }}
+    <input type="hidden" name="action" value="squeeze/download">
+    <input type="hidden" name="archivename" value="your-zipfile">
+
+    <input type="checkbox" name="files[]" value="10"><!-- asset id -->
+    <input type="checkbox" name="files[]" value="20"><!-- asset id -->
+
+    <input type="submit" value="Download!">
+</form>
+```
 
 ## Credits
 
