@@ -15,7 +15,7 @@ Go to the Plugin Store in your project’s Control Panel and search for “Squee
 ```html
 <form method="post" target="_blank">
     {{ getCsrfInput() }}
-    <input type="hidden" name="action" value="squeeze/download">
+    {{ actionInput('squeeze/download') }}
     <input type="hidden" name="archivename" value="archive">
     <input type="checkbox" name="files[]" value="10"><!-- asset id -->
     <input type="checkbox" name="files[]" value="20"><!-- asset id -->

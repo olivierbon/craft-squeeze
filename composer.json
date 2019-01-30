@@ -13,8 +13,8 @@
         "assets"
     ],
     "support": {
-        "docs": "http://squeeze.olivierbon.com/documentation/",
-        "issues": "http://squeeze.olivierbon.com"
+        "docs": "https://github.com/olivierbon/craft-squeeze",
+        "issues": "https://github.com/olivierbon/craft-squeeze"
     },
     "license": "proprietary",
     "authors": [
