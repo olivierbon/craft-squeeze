@@ -1,6 +1,6 @@
 # Squeeze plugin for Craft CMS 3.x
 
-Zip your craft assets on the fly ready for your user to download
+Zip one or multiple craft assets on the fly for frontend user to download.
 
 ## Requirements
 
