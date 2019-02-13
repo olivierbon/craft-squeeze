@@ -1,6 +1,6 @@
 {
     "name": "olivierbon/craft-squeeze",
-    "description": "Zip your craft assets on the fly ready for download",
+    "description": "Zip one or multiple craft assets on the fly for frontend user to download.",
     "type": "craft-plugin",
     "version": "1.0.0",
     "keywords": [
