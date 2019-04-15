@@ -42,8 +42,14 @@ class DownloadController extends Controller
         // Create the archive
         $archive = Squeeze::getInstance()->squeeze->archive($filename, $files);
         // Push the download
-        Craft::$app->response->sendFile($archive, null, array('forceDownload' => true));
+//        $response = Craft::$app->getResponse()->sendFile($archive, null, array('forceDownload' => true));
         // Delete the temps file
-        FileHelper::unlink($archive);
+//        FileHelper::unlink($archive);
+
+        $response = Craft::$app->getResponse();
+
+        return $response->sendFile($archive, null, ['forceDownload' => true]);
+
+//        return $response;
     }
 }

@@ -22,7 +22,10 @@ Go to the Plugin Store in your project’s Control Panel and search for “Squee
     <input type="submit" value="Download!">
 </form>
 ```
-
+To trigger download via url you can use:
+```
+/actions/squeeze/download?archivename=archive&files[]=10&files[]=20§
+```
 ## Credits
 
 Icon by Yazmin Alanis from the Noun Project
