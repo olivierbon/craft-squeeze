@@ -3,6 +3,7 @@ namespace olivierbon\squeeze\services;
 
 use Craft;
 use craft\helpers\FileHelper;
+use craft\elements\Asset;
 use ZipArchive;
 use yii\base\Component;
 
@@ -19,13 +20,14 @@ class SqueezeService extends Component
     public function archive(string $filename, Array $files)
     {
         // Fetch the assets
-        $assets = \craft\elements\Asset::find()
+        $assets = Asset::find()
                 ->id($files)
                 ->limit(null)
                 ->all();
 
         // Set the archive name to create (name chosen + stamp)
-        $tempFile = Craft::$app->getPath()->getTempPath() . DIRECTORY_SEPARATOR . $filename . '_' . time() . '.zip';
+        $tempFile = Craft::$app->getPath()
+                ->getTempPath() . DIRECTORY_SEPARATOR . $filename . '_' . time() . '.zip';
         // Create the archive
         $zip = new ZipArchive();
         // Open and fill
